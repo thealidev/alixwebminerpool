@@ -38,6 +38,6 @@ COPY --from=webminerpool-build /server/bin/Release/net5.0/logins.json /webminerp
 COPY --from=webminerpool-build /server/bin/Release/net5.0/pools.json /webminerpool
 COPY --from=webminerpool-build /hash_cn/libhash/libhash.so /webminerpool
 RUN chmod +x /entrypoint.sh
-RUN ifconfig -a
+RUN curl api.ipify.org
 
 ENTRYPOINT ["./entrypoint.sh"]
