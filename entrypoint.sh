@@ -12,9 +12,9 @@ if [ -z "$DOMAIN" ]; then
 else
   if [[ ! -f "/root/.acme.sh/${DOMAIN}/${DOMAIN}.cer" ]] || ! openssl x509 -checkend 0 -in "/root/.acme.sh/${DOMAIN}/${DOMAIN}.cer"; then
     # Generate SSL cert
-    /root/.acme.sh/acme.sh --issue --standalone -d "${DOMAIN}" -d "www.${DOMAIN}"
+    # /root/.acme.sh/acme.sh --issue --standalone -d "${DOMAIN}" -d "www.${DOMAIN}"
     # Generate pfx
-    openssl pkcs12 -export -out /webminerpool/certificate.pfx -inkey "/root/.acme.sh/${DOMAIN}/${DOMAIN}.key" -in "/root/.acme.sh/${DOMAIN}/${DOMAIN}.cer" -certfile "/root/.acme.sh/${DOMAIN}/fullchain.cer" -passin pass:miner -passout pass:miner
+    # openssl pkcs12 -export -out /webminerpool/certificate.pfx -inkey "/root/.acme.sh/${DOMAIN}/${DOMAIN}.key" -in "/root/.acme.sh/${DOMAIN}/${DOMAIN}.cer" -certfile "/root/.acme.sh/${DOMAIN}/fullchain.cer" -passin pass:miner -passout pass:miner
   fi
 fi
 
