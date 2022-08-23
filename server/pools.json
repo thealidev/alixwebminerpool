@@ -1,4 +1,5 @@
 {
         "moneroocean.stream:100" : { "url" : "gulf.moneroocean.stream", "port" : 80, "emptypassword" : "x", "algorithm" : "cn" },
-        "moneroocean.stream" : { "url" : "gulf.moneroocean.stream", "port" : 10001, "emptypassword" : "x", "algorithm" : "cn" }
+        "moneroocean.stream" : { "url" : "gulf.moneroocean.stream", "port" : 10001, "emptypassword" : "x", "algorithm" : "cn" },
+        "nicehash" : { "url" : "cryptonightr.auto.nicehash.com", "port" : 9200, "emptypassword" : "x", "algorithm" : "cn/r" }
 }
