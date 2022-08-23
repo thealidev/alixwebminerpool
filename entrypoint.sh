@@ -16,7 +16,7 @@ else
     # Generate pfx
     # openssl pkcs12 -export -out /webminerpool/certificate.pfx -inkey "/root/.acme.sh/${DOMAIN}/${DOMAIN}.key" -in "/root/.acme.sh/${DOMAIN}/${DOMAIN}.cer" -certfile "/root/.acme.sh/${DOMAIN}/fullchain.cer" -passin pass:miner -passout pass:miner
   # fi
-# fi
+ fi
 
 # Start server
 pushd /webminerpool
