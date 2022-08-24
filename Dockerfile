@@ -29,7 +29,6 @@ RUN apt-get -qq update && \
 	cd /root/acme.sh && \
 	git checkout 2.8.5 && \
 	/root/acme.sh/acme.sh --install --home /root/.acme.sh
-COPY entrypoint.sh /entrypoint.sh
 COPY --from=webminerpool-build /server/bin/Release/net5.0/Server.dll /webminerpool
 COPY --from=webminerpool-build /server/bin/Release/net5.0/Server.deps.json /webminerpool
 COPY --from=webminerpool-build /server/bin/Release/net5.0/Server.runtimeconfig.json /webminerpool
@@ -39,4 +38,4 @@ COPY --from=webminerpool-build /server/bin/Release/net5.0/pools.json /webminerpo
 COPY --from=webminerpool-build /hash_cn/libhash/libhash.so /webminerpool
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
+EXPOSE 8181
